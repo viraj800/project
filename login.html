@@ -7,6 +7,7 @@
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./css/login.css" />
+  <link rel="icon" href="images/login.ico">
   <script src="./javascript/login.js" defer></script>
   <title>Sign in & Sign up Form</title>
 </head>
@@ -18,41 +19,36 @@
     <p>Royal Banking Incorporation</p>
   </header>
   <!-- Common navigation -->
-  <nav id="cmnNav">
-    <ul id="nav">
+  <div class="nav">
+    <ul>
       <li><a href="advisory.html">Products and Services</a>
-        <ul>
-          <li><a href="">Personal Investments</a>
-            <ul>
-              <li><a href="">Company Insights</a></li>
-              <li><a href=""></a>Buy/Sell Advisory</li>
-            </ul>
-          </li>
-          <li><a href="">Credit Cards</a></li>
-          <li><a href="">Bank Accounts</a></li>
+        <ul class="dropdown">
+          <li><a href="advisory.html">Buy/Sell Advisory</a></li>
+          <li><a href="credit-cards.html">Credit Cards</a></li>
+          <li><a href="accounts.html">Bank Accounts</a></li>
         </ul>
       </li>
-      <li><a href="">About Us</a>
-        <ul>
-          <li><a href="">Our Team</a></li>
+      <li><a href="about-us.html">About Us</a>
+        <ul class="dropdown">
+          <li><a href="our-team.html">Our Team</a></li>
         </ul>
       </li>
-      <li><a href="">Contact</a>
-        <ul>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact Us Form</a></li>
-          <li><a href="">Connect with Us</a></li>
+      <li><a href="#">Contact</a>
+        <ul class="dropdown">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us Form</a></li>
+          <li><a href="#">Connect with Us</a></li>
         </ul>
       </li>
-      <li><a href="accounts.html">Career</a>
-        <ul>
-          <li><a href=""></a>Job Description</li>
-          <li><a href=""></a>Applicants Registration</li>
+      <li><a href="#">Career</a>
+        <ul class="dropdown">
+          <li><a href="job-application.html">Job Description</a></li>
+          <li><a href="job-listing.html">Applicants Registration</a></li>
         </ul>
       </li>
       <li><a href="login.html">Log in</a></li>
     </ul>
-  </nav>
+  </div>
   <!-- Common navigation ends -->
 
   <main>
@@ -151,14 +147,14 @@
   <!-- common footer -->
   <footer id="bottom">
     <div class="highfooter">
-      <p>Who we are</p>
-      <p>Our Team</p>
-      <p>Disclaimer</p>
-      <p>Customer Service</p>
-      <p>Contact Us</p>
-      <p>Social Media</p>
-      <p>Client</p>
-      <p>Log in/ Sign up</p>
+      <p><a href="about-us.html">Who we are</a></p>
+            <p><a href="our-team.html">Our Team</a></p>
+            <p><a href="faq.html">Disclaimer</a></p>
+            <p><a href="products-services.html">Customer Service</a></p>
+            <p><a href="contact.html">Contact Us</a></p>
+            <p><a href="login.html">Social Media</a></p>
+            <p><a href="accounts.html">Client</a></p>
+            <p><a href="login.html">Log in/ Sign up</a></p>
     </div>
     <p id="copyrighttext">Copyright &copy; 2022 Royal Banking Incorporation</p>
   </footer>

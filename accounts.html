@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/accounts.css">
+    <link rel="icon" href="images/accounts.ico">
     <script src="https://kit.fontawesome.com/6f54ccf028.js" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <script src="javascript/accounts.js"></script>
@@ -18,41 +19,36 @@
         <p>Royal Banking Incorporation</p>
     </header>
     <!-- Common navigation -->
-    <nav id="cmnNav">
-        <ul id="nav">
-            <li><a href="advisory.html">Products and Services</a>
-                <ul>
-                    <li><a href="">Personal Investments</a>
-                        <ul>
-                            <li><a href="">Company Insights</a></li>
-                            <li><a href=""></a>Buy/Sell Advisory</li>
-                        </ul>
-                    </li>
-                    <li><a href="">Credit Cards</a></li>
-                    <li><a href="">Bank Accounts</a></li>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Products and Services</a>
+                <ul class="dropdown">
+                    <li><a href="advisory.html">Buy/Sell Advisory</a></li>
+                    <li><a href="credit-cards.html">Credit Cards</a></li>
+                    <li><a href="accounts.html">Bank Accounts</a></li>
                 </ul>
             </li>
-            <li><a href="">About Us</a>
-                <ul>
-                    <li><a href="">Our Team</a></li>
+            <li><a href="about-us.html">About Us</a>
+                <ul class="dropdown">
+                    <li><a href="our-team.html">Our Team</a></li>
                 </ul>
             </li>
-            <li><a href="">Contact</a>
-                <ul>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Contact Us Form</a></li>
-                    <li><a href="">Connect with Us</a></li>
+            <li><a href="#">Contact</a>
+                <ul class="dropdown">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us Form</a></li>
+                    <li><a href="#">Connect with Us</a></li>
                 </ul>
             </li>
-            <li><a href="accounts.html">Career</a>
-                <ul>
-                    <li><a href=""></a>Job Description</li>
-                    <li><a href=""></a>Applicants Registration</li>
+            <li><a href="#">Career</a>
+                <ul class="dropdown">
+                    <li><a href="job-application.html">Job Description</a></li>
+                    <li><a href="job-listing.html">Applicants Registration</a></li>
                 </ul>
             </li>
-            <li><a href="login.html">Sign Out</a></li>
+            <li><a href="login.html">Sign out</a></li>
         </ul>
-    </nav>
+    </div>
     <!-- Common navigation ends -->
 
 
@@ -65,10 +61,11 @@
         </div>
         <div class="iconList">
             <ul>
-                <li><a class="btn" href="#"><i class="fa-solid fa-money-bill-transfer"></i></a></li>
-                <li><a class="btn" href="#"><i class="fa-solid fa-camera"></i></a></li>
-                <li><a class="btn" href="#"><i class="fa-solid fa-lightbulb"></i></a></li>
-                <li><a class="btn" href="#"><i class="fa-solid fa-sack-dollar"></i></a></li>
+                <li title="Transfers"><a class="btn" href="#"><i
+                            class="fa-solid fa-money-bill-transfer"></i></a>Transfers</li>
+                <li title="eDeposit"><a class="btn" href="#"><i class="fa-solid fa-camera"></i></a>eDeposit</li>
+                <li title="Spotlight"><a class="btn" href="#"><i class="fa-solid fa-lightbulb"></i></a>Spotlight</li>
+                <li title="Insight"><a class="btn" href="#"><i class="fa-solid fa-sack-dollar"></i></a>Insight</li>
             </ul>
         </div>
         <div id="accountsTbl">
@@ -144,7 +141,8 @@
                     <td><img src="insightChart.png" alt=""></td>
                 </tr>
                 <tr>
-                    <th colspan="2"><input type="button" value="Get Started" id="getStartedbtn" class="btn1"></th>
+                    <th colspan="2"><input type="button" value="Get Started" id="getStartedbtn" class="btn1"
+                            onclick="insightbtn()"></th>
                 </tr>
             </table>
         </div>
@@ -154,20 +152,23 @@
                     <th>Saving Goals</th>
                 <tr>
                 <tr>
-                    <th colspan="2"><input type="button" value="Create a Goal" id="savingGoalsbtn" class="btn1"></th>
+                    <th colspan="2"><input type="button" value="Create a Goal" id="savingGoalsbtn" class="btn1"
+                            onclick="savinggoalbtn()"></th>
                 </tr>
             </table>
         </div>
         <div>
             <table id="feedbackTbl">
                 <tr>
-                    <td>&nbsp Provide feedback<img src="images/feedback icon.png"></td>
+                    <td><a id="feedbacklink" onclick="feedbackbtn()" title="feedback">&nbsp Provide feedback<img
+                                src="images/feedback icon.png"></a></td>
                 </tr>
             </table>
         </div>
-       <p id="bottomPara"><img src="images/cyber-security.png">
-        Royal Bank Mobile Banking Security 
-        your security comes first. We're comitted to keeping you and your banking information safe. Find out how we protect you from fraud, and how you can protect yourself.</p>
+        <p id="bottomPara"><img src="images/cyber-security.png">
+            Royal Bank Mobile Banking Security
+            your security comes first. We're comitted to keeping you and your banking information safe. Find out how we
+            protect you from fraud, and how you can protect yourself.</p>
         <button id="darkModeBtn" onclick="toggleDark()">Toggle dark mode</button>
         <button id="scrollTop" onclick="scrollToTop()">Top</button>
     </main>
@@ -179,14 +180,14 @@
     <!-- common footer -->
     <footer id="bottom">
         <div class="highfooter">
-            <p>Who we are</p>
-            <p>Our Team</p>
-            <p>Disclaimer</p>
-            <p>Customer Service</p>
-            <p>Contact Us</p>
-            <p>Social Media</p>
-            <p>Client</p>
-            <p>Log in/ Sign up</p>
+            <p><a href="about-us.html">Who we are</a></p>
+            <p><a href="our-team.html">Our Team</a></p>
+            <p><a href="faq.html">Disclaimer</a></p>
+            <p><a href="products-services.html">Customer Service</a></p>
+            <p><a href="contact.html">Contact Us</a></p>
+            <p><a href="login.html">Social Media</a></p>
+            <p><a href="accounts.html">Client</a></p>
+            <p><a href="login.html">Log in/ Sign up</a></p>
         </div>
         <p id="copyrighttext">Copyright &copy; 2022 Royal Banking Incorporation</p>
     </footer>

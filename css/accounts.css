@@ -46,6 +46,9 @@ body {
     margin-bottom: 0;
     float: right;
   }
+  #feedbacklink{
+    cursor: pointer;
+  }
 /* Group common */
 /* style for common header----- */
 .cmnHead {
@@ -63,27 +66,94 @@ body {
     font-weight: 600;
 }
 /* Common navigation ---------------------- */
-#cmnNav {
-    background-color: #DADDFC;
-    padding: 2px;
-    width: auto;
-    font-size: 1em;
+.nav ul{
+    list-style: none;
 }
-#cmnNav ul {
-    list-style-type: none;
-    display: flex;
+.nav{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.nav li:hover{
+    background: #8e94d8;
+}
+.nav > ul{
+    list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: space-around;
-    height: 2.5em;
-    align-items: center;
+    display: inline-block;
+    background: #DADDFC;
+    color: black;
+    width: 100%;
 }
-#cmnNav ul ul {
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.nav > ul > li{
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    float: left;
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+}
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+.dropdown li{
+    background: #DADDFC;
     display: none;
 }
-#cmnNav ul li a {
-    text-decoration: none;
-    color: black;
+.dropdown li:hover{
+    background: #8e94d8;
+}
+.nav li:hover > .dropdown{
+    perspective: 1000px;
+}
+.nav li:hover > .dropdown li{
+    transform-origin: top center;
+    opacity: 0;
+    display: block;
+}
+.nav li:hover > .dropdown li:nth-child(1){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: -150ms;
+}
+.nav li:hover > .dropdown li:nth-child(2){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 0ms;
+}
+.nav li:hover > .dropdown li:nth-child(3){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 150ms;
+}
+.nav li:hover > .dropdown li:nth-child(4){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 300ms;
+}
+.nav li:hover > .dropdown li:nth-child(5){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 450ms;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    70%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 /* Common navigation ends -------------------- */
 /* footer section ===============================================*/
@@ -268,13 +338,13 @@ input{
 
 /* navigation ===================================================*/
 /* Common navigation ---------------------- */
-#cmnNav {
+.nav {
     padding: 0;
     margin: 0;
     width: 100%;
     font-size: 1em;
 }
-#cmnNav ul {
+.nav ul {
     display: grid;
     grid-template-columns: 100%;
     padding: 0;
@@ -283,10 +353,11 @@ input{
     text-align: center;
     height: auto;
 }
-#cmnNav ul li{
+.nav ul li{
     padding: 5px 0;
     border-bottom: 2px solid rgb(121, 128, 184);
     border-radius: 15px;
+    width: 100%;
 }
 /* Common navigation ends -------------------- */
 
@@ -329,7 +400,14 @@ table{
     width: 4%;
 }
 /* Main section ends ===============================================*/
-
+#darkModeBtn{
+    width: 150px;
+    font-size: 12px;
+}
+#scrollTop{
+    width: 150px;
+    font-size: 12px;
+}
 
 /* footer section ===============================================*/
 #bottom{

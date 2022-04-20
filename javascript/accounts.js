@@ -22,3 +22,12 @@ function toggleDark() {
  function scrollToTop() {
     window.scrollTo(0, 0);
 }
+function insightbtn() {
+    alert("You don't have any Insights currently");
+  }
+  function savinggoalbtn() {
+    alert("Goal is Created.");
+  }
+  function feedbackbtn() {
+    alert("This page is not ready yet!!");
+  }
